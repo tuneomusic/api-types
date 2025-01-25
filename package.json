@@ -1,17 +1,27 @@
 {
 	"name": "@tuneo/types",
+	"version": "0.0.2",
+	"author": {
+		"name": "Unreal",
+		"url": "https://github.com/yUnreal"
+	},
 	"module": "types/index.ts",
-	"type": "module",
 	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
-	"dependencies": {
-		"@biomejs/biome": "^1.9.4"
-	},
+	"description": "Official types for Tuneo API",
+	"keywords": [
+		"types",
+		"typescript",
+		"tuneo",
+		"api"
+	],
 	"scripts": {
 		"format": "bunx biome check --write ."
-	}
+	},
+	"type": "module"
 }

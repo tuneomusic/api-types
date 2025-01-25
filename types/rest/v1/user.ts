@@ -40,17 +40,17 @@ export type RESTPostSendFriendRequest = never;
 
 export type RESTDeleteRejectFriendRequest = never;
 
-export type RESTPutAcceptFriendRequest= never;
+export type RESTPutAcceptFriendRequest = never;
 
 export type RESTDeletePlaylist = never;
 
 export type RESTPostBulkAddPlaylistSongs = never;
 
 export interface RESTPostBulkAddPlaylistSongsJSONBody {
-    /**
-     * The ID of the songs to bulk add
-     */
-    songsId: string[];
+	/**
+	 * The ID of the songs to bulk add
+	 */
+	songsId: string[];
 }
 
 export type RESTPostSendPlaylistMemberRequest = never;
@@ -64,8 +64,8 @@ export type RESTPostCreateFolder = APIFolder;
 export type RESTPatchUpdateFolder = APIFolder;
 
 export interface RESTPatchUpdateFolderJSONBody {
-    name?: string;
-    pinned?: true | null;
+	name?: string;
+	pinned?: true | null;
 }
 
 export type RESTDeleteFolder = never;
@@ -76,15 +76,21 @@ export type RESTGetListCurrentUserPlaylists = APIUserPlaylist[];
 
 export type RESTPostCreatePlaylist = APIUserPlaylist;
 
-export type RESTPostCreatePlaylistJSONBody = Pick<APIUserPlaylist, 'name' | 'coverUrl' | 'color'>;
+export type RESTPostCreatePlaylistJSONBody = Pick<
+	APIUserPlaylist,
+	'name' | 'coverUrl' | 'color'
+>;
 
 export type RESTPatchUpdatePlaylist = APIUserPlaylist;
 
-export interface RESTPatchUpdatePlaylistJSONBody extends Partial<Pick<APIUserPlaylist, 'name' | 'coverUrl' | 'color' | 'folderId'>> {
-    /**
-     * Use "null" if you want to unpin the playlist
-     */
-    pinned?: true | null
+export interface RESTPatchUpdatePlaylistJSONBody
+	extends Partial<
+		Pick<APIUserPlaylist, 'name' | 'coverUrl' | 'color' | 'folderId'>
+	> {
+	/**
+	 * Use "null" if you want to unpin the playlist
+	 */
+	pinned?: true | null;
 }
 
 export type RESTPostCopyPlaylist = APIUserPlaylist;

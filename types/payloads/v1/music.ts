@@ -46,7 +46,11 @@ export interface APIBasePlaylist<Type extends PlaylistType | undefined> {
 	editors: APIPlaylistEditor[];
 }
 
-export type APIPlaylist = APIUserPlaylist | APIGenrePlaylist | APIArtistPlaylist | APIWrappedPlaylist;
+export type APIPlaylist =
+	| APIUserPlaylist
+	| APIGenrePlaylist
+	| APIArtistPlaylist
+	| APIWrappedPlaylist;
 
 export interface APIPlaylistEditor {
 	/**
