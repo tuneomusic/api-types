@@ -19,3 +19,5 @@ function updateUser(data: RESTPatchUpdateCurrentUserJSONBody): RESTPatchUpdateCu
 ```
 
 Import types with the suffix `JSONBody` when you need to type a route the needs a body in the request.
+
+Types exported as `never` are when the API response is NO CONTENT.
