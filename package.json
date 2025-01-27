@@ -5,7 +5,9 @@
 		"name": "Unreal",
 		"url": "https://github.com/yUnreal"
 	},
-	"types": "types/index.ts",
+	"main": "./dist/index.d.ts",
+	"types": "./dist/index.d.ts",
+	"files": ["dist"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest"
@@ -21,6 +23,7 @@
 		"api"
 	],
 	"scripts": {
+		"dist": "tsc",
 		"format": "bunx biome check --write ."
 	},
 	"type": "module"

@@ -8,7 +8,7 @@
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
 		"verbatimModuleSyntax": true,
-		"noEmit": true,
+		"noEmit": false,
 
 		"strict": true,
 		"skipLibCheck": true,
@@ -17,8 +17,16 @@
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
 		"noPropertyAccessFromIndexSignature": false,
+
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "dist",
+		"esModuleInterop": true,
+
 		"paths": {
 			"@/*": ["./types/*"]
 		}
-	}
+	},
+	"include": ["./types/**/*.ts"],
+	"exclude": ["node_modules"]
 }
