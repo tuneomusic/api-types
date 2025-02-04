@@ -10,7 +10,8 @@
 	"files": ["dist"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"tsc-alias": "^1.8.10"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
@@ -23,7 +24,7 @@
 		"api"
 	],
 	"scripts": {
-		"dist": "tsc",
+		"dist": "tsc && tsc-alias",
 		"format": "bunx biome check --write ."
 	},
 	"type": "module"
